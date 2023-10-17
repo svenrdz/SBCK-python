@@ -1,5 +1,5 @@
 context:
-  version: "{{ environ['GIT_DESCRIBE_TAG'] }}"
+  version: "{{ environ['GITHUB_REF'] }}"
 
 package:
   name: sbck
