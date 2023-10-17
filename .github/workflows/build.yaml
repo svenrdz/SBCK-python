@@ -24,10 +24,10 @@ jobs:
       - name: Build
         shell: bash -l {0}
         run: |
-          boa build recipe --output-folder /build
+          boa build recipe --output-folder ./build
       - name: Publish
         shell: bash -l {0}
         run: |
-          anaconda upload /build/*/*.tar.bz2
+          anaconda upload ./build/*/*.tar.bz2
         env:
           ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
