@@ -25,7 +25,7 @@ jobs:
         shell: bash -l {0}
         run: |
           mkdir build
-          boa build recipe --output-folder ./build
+          boa build recipe --output-folder ./build -m recipe/variants.yaml
       - name: Publish
         shell: bash -l {0}
         run: |
