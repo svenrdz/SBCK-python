@@ -24,6 +24,7 @@ jobs:
       - name: Build
         shell: bash -l {0}
         run: |
+          mkdir build
           boa build recipe --output-folder ./build
       - name: Publish
         shell: bash -l {0}

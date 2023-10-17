@@ -2,7 +2,7 @@ context:
   version: "{{ environ['GITHUB_REF'] }}"
 
 package:
-  name: sbck
+  name: SBCK
   version: '{{ version }}'
 
 source:
