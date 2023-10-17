@@ -1,0 +1,33 @@
+context:
+  version: "{{ environ['GIT_DESCRIBE_TAG'] }}"
+
+package:
+  name: sbck
+  version: '{{ version }}'
+
+source:
+  - path: ..
+
+build:
+  number: 0
+  script: python -m pip install --ignore-installed .
+  include_recipe: false
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pybind11 >=2.2
+    - eigen >=3.4.0
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - matplotlib
+    - pybind11 >=2.2
+    - pot >=0.9.0
+
+test:
+  imports:
+    - SBCK
